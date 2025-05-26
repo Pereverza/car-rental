@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+# 🚗 RentalCar – веб-застосунок для оренди авто
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цей проєкт — фронтенд-реалізація веб-додатку **RentalCar**, який дозволяє користувачам зручно обирати, переглядати та бронювати автомобілі онлайн.
 
-Currently, two official plugins are available:
+## 🔧 Стек технологій
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19 + TypeScript**
+- **Redux Toolkit** — для управління глобальним станом
+- **React Router** — для маршрутизації між сторінками
+- **Axios** — для HTTP-запитів
+- **Vite** — для швидкої розробки
+- **CSS Modules** — для стилізації
+- **Toastify** — для нотифікацій
 
-## Expanding the ESLint configuration
+## 📄 Сторінки
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `/` — домашня сторінка з банером
+- `/catalog` — сторінка каталогу з фільтрами, сортуванням і пагінацією
+- `/catalog/:id` — детальна сторінка авто з формою бронювання
+- `/favorites` — список обраних авто (зберігається в localStorage)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Основні функції
+
+- 🔍 Фільтрація авто по бренду, ціні та пробігу
+- ❤️ Додавання авто в «обране»
+- 📄 Детальна сторінка з умовами оренди
+- 📅 Бронювання авто з вибором дати + toast-повідомлення
+- 🔁 Завантаження додаткових авто через кнопку "Load More"
+- 🧭 Повна маршрутизація через React Router
+
+## 📦 Як запустити локально
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Проєкт буде доступний за адресою `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Структура проєкту (коротко)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
+├── src/
+│   ├── pages/
+│   ├── components/
+│   ├── redux/ (store, slices)
+│   ├── utils/
+│   └── App.tsx
+├── public/
+│   └── favicon.svg
+└── index.html
+```
+
+## 🧑‍💻 Автор
+
+**Pereverza Tetiana**
+
+[🔗 Живий демо-сайт на Vercel](https://car-rentar.vercel.app)

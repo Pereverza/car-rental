@@ -1,0 +1,64 @@
+.homeWrapper {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero {
+    position: relative;
+    height: 700px;
+    background-image: url("/Picture.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  .title {
+    font-weight: 700;
+    font-size: 60px; 
+    line-height: 1.2;
+    text-align: center;
+    color: var(--white);
+    padding-bottom: 16px;
+    font-family: var(--font-family);
+  }
+  
+  .subtitle {
+    font-weight: 600;
+    font-size: 24px; 
+    line-height: 1.33333;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 40px;
+  }
+  
+  .ctaButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0px;
+    border-radius: 12px;
+  padding: 12px 99px;
+  background: #3470FF;
+  color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ctaButton:hover {
+    background-color: #0B44CD;
+  }
+  
